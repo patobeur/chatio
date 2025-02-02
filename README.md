@@ -17,11 +17,11 @@ Exemple : http://192.168.1.105:3500 (must be your serveur ip adress)
 
 
 ## package json
-```json
+```md
     {
         "name": "chatio",
         "version": "1.0.0",
-        "description": "Simple LAN tchat using Node.js and Socket.IO",
+        "description": "simple LAN tchat using node.JS and Socket.IO",
         "main": "server.mjs",
         "type": "module",
         "scripts": {
@@ -31,13 +31,14 @@ Exemple : http://192.168.1.105:3500 (must be your serveur ip adress)
         "author": "",
         "license": "ISC",
         "dependencies": {
-            "express": "^4.17.1",
-            "socket.io": "^4.1.3"
+            "express": "^4.21.2",
+            "socket.io": "^4.7.5"
         },
         "devDependencies": {
             "nodemon": "^3.1.3"
         }
     }
+
 ```
 
 
