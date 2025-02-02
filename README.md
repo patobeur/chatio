@@ -1,10 +1,13 @@
-# chatio
-simple LAN tchat using node.JS and Socket.IO
+# chatIo
+Simple LAN tchat using Node.js and Socket.
 
 
 ## installation and run
 
 ```console
+
+    > git clone https://github.com/patobeur/chatio.git
+    > cd chatio
     > npm install
     > npm run dev
 ```
@@ -18,7 +21,7 @@ Exemple : http://192.168.1.105:3500 (must be your serveur ip adress)
     {
         "name": "chatio",
         "version": "1.0.0",
-        "description": "simple LAN tchat using node.JS and Socket.IO",
+        "description": "Simple LAN tchat using Node.js and Socket.IO",
         "main": "server.mjs",
         "type": "module",
         "scripts": {

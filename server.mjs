@@ -44,7 +44,7 @@ const expressServer = app.listen(PORT, () => {
 // écouteur sur le serveur pour la connexion du client (méthode avec CORS)
 const io = new Server(expressServer, {
 	cors: {
-		origin: '*', // Vous pouvez restreindre les origines autorisées si nécessaire
+		origin: '*', // Vous pouvez restreindre les origines autorisées ici
 		methods: ['POST'],
 		allowedHeaders: ['Content-Type'],
 		credentials: true
@@ -63,10 +63,7 @@ const _socketing = {
 			id: this.socket.id,
 			openRooms: _rooms.getOpensRooms(),//['a', 'b', 'c'], // TODO generate it
 			folders: ['name', 'room'],
-			// user: {
-			// 	name: 'invité',
-			// 	room: 'vide'
-			// }
+			// user: { name: 'invité', room: 'vide' }
 		}
 		this.socket.emit('init', paquet)
 
@@ -76,9 +73,8 @@ const _socketing = {
 	},
 	leaveRoom: function ({ id, name }) {
 		if (this.prevRoom) {
-			this.socket.leave(this.prevRoom)
 			// LE JOUEUR A QUITTÉ LA ROOM
-
+			this.socket.leave(this.prevRoom)
 			// message to all user in prevroom
 			io.to(this.prevRoom).emit('message',
 				`[${UsersState.getTime()}][${this.prevRoom}][Server] ${name} has left the room`
@@ -145,7 +141,7 @@ io.on('connection', (socket) => {
 		let usersInRoomCount = UsersState.getUsersInRoom(room).length
 		if (usersInRoomCount < _rooms.maxUserPerRooms) {
 
-			// met la room du user dans prevRoom (vide si vide) si le user existe
+			// met la room du user dans prevRoom si le user existe
 			_socketing.prevRoom = UsersState.getUser(socket.id)?.room
 
 			// leave previous room if prevRoom
