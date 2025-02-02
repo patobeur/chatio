@@ -1,4 +1,6 @@
 # chatIo
+![Mon Image](./public/assets/logoChat.png "Shema de la base de données relationelle.")
+
 Simple LAN tchat using Node.js and Socket.
 
 
@@ -50,5 +52,3 @@ and live server for local server : https://gist.github.com/donmccurdy/20fb112949
 
 
 
-
-![Mon Image](./public/assets/img/logoChat.png "Shema de la base de données relationelle.")
