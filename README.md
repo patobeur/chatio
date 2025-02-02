@@ -47,3 +47,8 @@ https://nodejs.org/fr
 https://socket.io/
 
 and live server for local server : https://gist.github.com/donmccurdy/20fb112949324c92c5e8
+
+
+
+
+![Mon Image](./public/assets/img/logoChat.png "Shema de la base de données relationelle.")
